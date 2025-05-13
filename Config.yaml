@@ -1,16 +1,16 @@
 proxies
 - name: (ID) Rumahweb 🇮🇩
-  type: vless
-  server: investor.fb.com
-  port: 443
-  uuid: 0f1959d2-dc35-41c3-a8ed-522344b7d255
-  cipher: none
-  skip-cert-verify: true
-  servername: investor.fb.com.violetvpn.biz.id
-  tls: true
-  network: ws
-  ws-opts:
-    path: /id-rweb
-    headers:
-      Host: investor.fb.com.violetvpn.biz.id
-  udp: true
+    server: investor.fb.com
+    port: 443
+    type: vless
+    uuid: 0f1959d2-dc35-41c3-a8ed-522344b7d255
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: investor.fb.com.violetvpn.biz.id
+    network: ws
+    ws-opts: 
+      path: /id-rweb
+      headers: 
+        Host: investor.fb.com.violetvpn.biz.id
+    udp: true
