@@ -1,16 +1,16 @@
-proxies
-- name: (ID) Rumahweb 🇮🇩
-    server: investor.fb.com
+proxies:
+- name: (ID) Pt Pusat Media 🇮🇩
+    server: ava.game.naver.com
     port: 443
     type: vless
-    uuid: 0f1959d2-dc35-41c3-a8ed-522344b7d255
+    uuid: 42c75c4c-267e-4ed2-a9ea-097a44cb57c9
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: investor.fb.com.violetvpn.biz.id
+    servername: ava.game.naver.com.violetvpn.biz.id
     network: ws
     ws-opts: 
-      path: /id-rweb
+      path: /id-pusat
       headers: 
-        Host: investor.fb.com.violetvpn.biz.id
+        Host: ava.game.naver.com.violetvpn.biz.id
     udp: true
