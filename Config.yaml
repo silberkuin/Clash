@@ -348,7 +348,7 @@ proxy-groups:
 - name: OTOMATIS
   type: fallback
   url: https://speed.cloudflare.com/locations
-  interval: 8
+  interval: 3
   proxies:
   - (ID) Amazon.com, Inc ðŸ‡®ðŸ‡©
   - (ID) Pt Pusat Media ðŸ‡®ðŸ‡©
@@ -366,7 +366,7 @@ proxy-groups:
 - name: BEST PING
   type: url-test
   url: https://speed.cloudflare.com/locations
-  interval: 8
+  interval: 3
   proxies:
   - (ID) Amazon.com, Inc ðŸ‡®ðŸ‡©
   - (ID) Pt Pusat Media ðŸ‡®ðŸ‡©
