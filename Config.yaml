@@ -1,16 +1,386 @@
+#Group Telegram : https://t.me/vless_bodong
+#Author : https://t.me/trust_bodong
+
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: false
+  use-host: true
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - msftconnecttest.com
+    - msftncsi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - +.battlenet.com.cn
+    - +.wotgame.cn
+    - +.wggames.cn
+    - +.wowsgame.cn
+    - +.wargaming.net
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - heartbeat.belkin.com
+    - "*.linksys.com"
+    - "*.linksyssmartwifi.com"
+    - "*.router.asus.com"
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - +.nflxvideo.net
+    - "*.square-enix.com"
+    - "*.finalfantasyxiv.com"
+    - "*.ffxiv.com"
+    - "*.mcdn.bilivideo.cn"
+    - +.media.dssott.com
 proxies:
-- name: (ID) Pt Pusat Media 🇮🇩
-    server: ava.game.naver.com
-    port: 443
-    type: vless
-    uuid: 42c75c4c-267e-4ed2-a9ea-097a44cb57c9
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: ava.game.naver.com.violetvpn.biz.id
-    network: ws
-    ws-opts: 
-      path: /id-pusat
-      headers: 
-        Host: ava.game.naver.com.violetvpn.biz.id
-    udp: true
+- name: (ID) Amazon.com, Inc ðŸ‡®ðŸ‡©
+  type: vless
+  server: Investor.fb.com
+  port: 443
+  uuid: b72188d0-63c9-4437-9e1a-278222cb6c09
+  cipher: none
+  skip-cert-verify: true
+  servername: violetvpn.biz.id
+  tls: true
+  network: ws
+  ws-opts:
+    path: /id-amz
+    headers:
+      Host: violetvpn.biz.id
+  udp: true
+- name: (ID) Pt Pusat Media ðŸ‡®ðŸ‡©
+  type: vless
+  server: Investor.fb.com
+  port: 443
+  uuid: b6639e66-8b14-48aa-9299-7e59196861b5
+  cipher: none
+  skip-cert-verify: true
+  servername: violetvpn.biz.id
+  tls: true
+  network: ws
+  ws-opts:
+    path: /id-pusat
+    headers:
+      Host: violetvpn.biz.id
+  udp: true
+- name: (ID) PT. Telekomunikasi ðŸ‡®ðŸ‡©
+  type: vless
+  server: Investor.fb.com
+  port: 443
+  uuid: c2405d5c-bc45-40c4-b416-875ee3e27e69
+  cipher: none
+  skip-cert-verify: true
+  servername: violetvpn.biz.id
+  tls: true
+  network: ws
+  ws-opts:
+    path: /id-tele
+    headers:
+      Host: violetvpn.biz.id
+  udp: true
+- name: (MY) Gb Network Solutions ðŸ‡²ðŸ‡¾
+  type: vless
+  server: Investor.fb.com
+  port: 443
+  uuid: c03e564b-a182-4e4d-8267-dc37d098a248
+  cipher: none
+  skip-cert-verify: true
+  servername: violetvpn.biz.id
+  tls: true
+  network: ws
+  ws-opts:
+    path: /my-gbns
+    headers:
+      Host: violetvpn.biz.id
+  udp: true
+- name: (MY) Kaopu Cloud ðŸ‡²ðŸ‡¾
+  type: vless
+  server: Investor.fb.com
+  port: 443
+  uuid: fcf20122-2b20-4fb0-b83b-a1cb65918db0
+  cipher: none
+  skip-cert-verify: true
+  servername: violetvpn.biz.id
+  tls: true
+  network: ws
+  ws-opts:
+    path: /my-kao
+    headers:
+      Host: violetvpn.biz.id
+  udp: true
+- name: (SG) Contabo Asia ðŸ‡¸ðŸ‡¬
+  type: vless
+  server: Investor.fb.com
+  port: 443
+  uuid: 8d3a2913-8cf2-4549-be73-831d7f7ab232
+  cipher: none
+  skip-cert-verify: true
+  servername: violetvpn.biz.id
+  tls: true
+  network: ws
+  ws-opts:
+    path: /sg-cntb
+    headers:
+      Host: violetvpn.biz.id
+  udp: true
+- name: (SG) Digitalocean, LLC ðŸ‡¸ðŸ‡¬
+  type: vless
+  server: Investor.fb.com
+  port: 443
+  uuid: 352a8b36-eb19-403e-a131-edf7fe7e04e0
+  cipher: none
+  skip-cert-verify: true
+  servername: violetvpn.biz.id
+  tls: true
+  network: ws
+  ws-opts:
+    path: /sg-do
+    headers:
+      Host: violetvpn.biz.id
+  udp: true
+- name: (SG) Godaddy.com, LLC ðŸ‡¸ðŸ‡¬
+  type: vless
+  server: Investor.fb.com
+  port: 443
+  uuid: bdc74ed9-cc0b-4ed4-8382-e2665be193b0
+  cipher: none
+  skip-cert-verify: true
+  servername: violetvpn.biz.id
+  tls: true
+  network: ws
+  ws-opts:
+    path: /sg-gody
+    headers:
+      Host: violetvpn.biz.id
+  udp: true
+- name: (SG) Melbikomas Uab ðŸ‡¸ðŸ‡¬
+  type: vless
+  server: Investor.fb.com
+  port: 443
+  uuid: 81a727c0-3f6b-42d2-bb30-be8402006818
+  cipher: none
+  skip-cert-verify: true
+  servername: violetvpn.biz.id
+  tls: true
+  network: ws
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: violetvpn.biz.id
+  udp: true
+- name: (SG) Oracle Corporation ðŸ‡¸ðŸ‡¬
+  type: vless
+  server: Investor.fb.com
+  port: 443
+  uuid: 488ea199-2b86-4129-96a0-a17b6d70e73a
+  cipher: none
+  skip-cert-verify: true
+  servername: violetvpn.biz.id
+  tls: true
+  network: ws
+  ws-opts:
+    path: /sg-orcl
+    headers:
+      Host: violetvpn.biz.id
+  udp: true
+- name: (SG) OVH SAS ðŸ‡¸ðŸ‡¬
+  type: vless
+  server: Investor.fb.com
+  port: 443
+  uuid: 6358d9f1-62bd-454d-a2e1-e38bd8f15591
+  cipher: none
+  skip-cert-verify: true
+  servername: violetvpn.biz.id
+  tls: true
+  network: ws
+  ws-opts:
+    path: /sg-ovh
+    headers:
+      Host: violetvpn.biz.id
+  udp: true
+- name: (SG) Regxa Company ðŸ‡¸ðŸ‡¬
+  type: vless
+  server: Investor.fb.com
+  port: 443
+  uuid: e3fce621-46a9-4c02-9b17-8d1a1224ebfb
+  cipher: none
+  skip-cert-verify: true
+  servername: violetvpn.biz.id
+  tls: true
+  network: ws
+  ws-opts:
+    path: /sg-rgxa
+    headers:
+      Host: violetvpn.biz.id
+  udp: true
+- name: Random ISP
+  type: vless
+  server: Investor.fb.com
+  port: 443
+  uuid: b9c34018-2242-4474-8261-c2d87b8e9121
+  cipher: none
+  skip-cert-verify: true
+  servername: violetvpn.biz.id
+  tls: true
+  network: ws
+  ws-opts:
+    path: /random
+    headers:
+      Host: violetvpn.biz.id
+  udp: true
+proxy-groups:
+- name: MANUAL
+  type: select  
+  proxies:  
+  - (ID) Amazon.com, Inc ðŸ‡®ðŸ‡©
+  - (ID) Pt Pusat Media ðŸ‡®ðŸ‡©
+  - (ID) PT. Telekomunikasi ðŸ‡®ðŸ‡©
+  - (MY) Gb Network Solutions ðŸ‡²ðŸ‡¾
+  - (MY) Kaopu Cloud ðŸ‡²ðŸ‡¾
+  - (SG) Contabo Asia ðŸ‡¸ðŸ‡¬
+  - (SG) Digitalocean, LLC ðŸ‡¸ðŸ‡¬
+  - (SG) Godaddy.com, LLC ðŸ‡¸ðŸ‡¬
+  - (SG) Melbikomas Uab ðŸ‡¸ðŸ‡¬
+  - (SG) Oracle Corporation ðŸ‡¸ðŸ‡¬
+  - (SG) OVH SAS ðŸ‡¸ðŸ‡¬
+  - (SG) Regxa Company ðŸ‡¸ðŸ‡¬
+  - Random ISP
+  - OTOMATIS
+  - BEST PING
+- name: OTOMATIS
+  type: fallback
+  url: https://speed.cloudflare.com/locations
+  interval: 8
+  proxies:
+  - (ID) Amazon.com, Inc ðŸ‡®ðŸ‡©
+  - (ID) Pt Pusat Media ðŸ‡®ðŸ‡©
+  - (ID) PT. Telekomunikasi ðŸ‡®ðŸ‡©
+  - (MY) Gb Network Solutions ðŸ‡²ðŸ‡¾
+  - (MY) Kaopu Cloud ðŸ‡²ðŸ‡¾
+  - (SG) Contabo Asia ðŸ‡¸ðŸ‡¬
+  - (SG) Digitalocean, LLC ðŸ‡¸ðŸ‡¬
+  - (SG) Godaddy.com, LLC ðŸ‡¸ðŸ‡¬
+  - (SG) Melbikomas Uab ðŸ‡¸ðŸ‡¬
+  - (SG) Oracle Corporation ðŸ‡¸ðŸ‡¬
+  - (SG) OVH SAS ðŸ‡¸ðŸ‡¬
+  - (SG) Regxa Company ðŸ‡¸ðŸ‡¬
+  - Random ISP
+- name: BEST PING
+  type: url-test
+  url: https://speed.cloudflare.com/locations
+  interval: 8
+  proxies:
+  - (ID) Amazon.com, Inc ðŸ‡®ðŸ‡©
+  - (ID) Pt Pusat Media ðŸ‡®ðŸ‡©
+  - (ID) PT. Telekomunikasi ðŸ‡®ðŸ‡©
+  - (MY) Gb Network Solutions ðŸ‡²ðŸ‡¾
+  - (MY) Kaopu Cloud ðŸ‡²ðŸ‡¾
+  - (SG) Contabo Asia ðŸ‡¸ðŸ‡¬
+  - (SG) Digitalocean, LLC ðŸ‡¸ðŸ‡¬
+  - (SG) Godaddy.com, LLC ðŸ‡¸ðŸ‡¬
+  - (SG) Melbikomas Uab ðŸ‡¸ðŸ‡¬
+  - (SG) Oracle Corporation ðŸ‡¸ðŸ‡¬
+  - (SG) OVH SAS ðŸ‡¸ðŸ‡¬
+  - (SG) Regxa Company ðŸ‡¸ðŸ‡¬
+  - Random ISP
+rules:
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- MATCH,MANUAL
